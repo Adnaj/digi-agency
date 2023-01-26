@@ -84,7 +84,8 @@
       if (window.scrollY > 100) {
         selectHeader.classList.add('header-scrolled')
       } else {
-        selectHeader.classList.remove('header-scrolled')
+        // selectHeader.classList.remove('header-scrolled')
+        selectHeader.classList.add('header-scrolled')
       }
     }
     window.addEventListener('load', headerScrolled)
@@ -270,13 +271,41 @@
       }
     }
   });
+  new Swiper('.mySwiper', {
+    speed: 600,
+    loop: true,
+    slidesPerView: 'auto',
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+
+      1200: {
+        slidesPerView: 3,
+      }
+    }
+  });
+  
+  /**
+   * Testimonials slider 2222
+   */
+
 
   /**
    * Animation on scroll
    */
   function aos_init() {
     AOS.init({
-      duration: 1000,
+      duration: 600,
       easing: "ease-in-out",
       once: true,
       mirror: false
@@ -292,3 +321,19 @@
   new PureCounter();
 
 })();
+
+window.onload=function(){
+  $('.slider').slick({
+  autoplay:true,
+  autoplaySpeed:1500,
+  arrows:true,
+  prevArrow:'<button type="button" class="slick-prev"></button>',
+  nextArrow:'<button type="button" class="slick-next"></button>',
+  centerMode:true,
+  slidesToShow:3,
+  slidesToScroll:1
+  });
+};
+
+
+

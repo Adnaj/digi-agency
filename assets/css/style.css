@@ -8,12 +8,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@800&family=Poppins&family=Roboto&family=Ubuntu&display=swap');
 :root {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
   color: #444444;
 }
 
@@ -40,7 +41,7 @@ h6 {
 # Sections
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 25px 0;
   overflow: hidden;
 }
 
@@ -52,7 +53,7 @@ section {
 .section-header h2 {
   font-size: 13px;
   letter-spacing: 1px;
-  font-weight: 700;
+  font-weight: 300;
   margin: 0;
   color: #4154f1;
   text-transform: uppercase;
@@ -63,7 +64,7 @@ section {
   padding: 0;
   font-size: 38px;
   line-height: 42px;
-  font-weight: 700;
+  font-weight: 300;
   color: #012970;
 }
 
@@ -79,7 +80,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: #012970;
+  background: #1b1b1b;
   min-height: 40px;
   margin-top: 82px;
   color: #fff;
@@ -231,7 +232,7 @@ section {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #013289;
+  color: #444;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -446,21 +447,35 @@ section {
 .hero {
   width: 100%;
   height: 100vh;
-  background: url(../img/hero-bg.png) top center no-repeat;
+  background-image: url(../img/backgrdCopy.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
+  /* background: url(../img/hero-bg.png) top center no-repeat; */
+
 }
 
 .hero h1 {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
-  color: #012970;
+  color: #ffffff;
 }
 
 .hero h2 {
-  color: #444444;
+  color: #fffafa;
   margin: 15px 0 0 0;
   font-size: 26px;
+}
+.values .btn-get-started{
+  color: #f6f9ff;
+  margin-top: -5px;
+  line-height: 0;
+  padding: 25px 45px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(65, 84, 241, 0.4);
+  border: 1px solid #012970;
+  background-color: #444444;
+  
 }
 
 .hero .btn-get-started {
@@ -470,7 +485,7 @@ section {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #4154f1;
+  background: #012970;
   box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 
@@ -503,7 +518,7 @@ section {
 
 @media (max-width: 991px) {
   .hero {
-    height: auto;
+    /* height: auto; */
     padding: 120px 0 60px 0;
   }
 
@@ -534,6 +549,16 @@ section {
     width: 100%;
   }
 }
+@media (max-width: 600px){
+  .hero h2 {
+    color: #1b1b1b;
+  }
+}
+@media (min-width: 800px){
+  .hero {
+    background-image: url(../img/backgrdCopy.jpg);
+  }
+}
 
 /*--------------------------------------------------------------
 # Index Page
@@ -541,27 +566,34 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about .img-fluid{
+  height: 100%;
+}
+
+
 .about .content {
   background-color: #f6f9ff;
-  padding: 40px;
+  /* background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% ); */
+  padding: 20px;
+  --bs-gutter-x: 0;
 }
 
 .about h3 {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   color: #4154f1;
   text-transform: uppercase;
 }
 
 .about h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #012970;
+  font-size: 38px;
+  font-weight: 800;
+  color: #1b1b1b;
 }
 
 .about p {
   margin: 15px 0 30px 0;
-  line-height: 24px;
+  line-height: 34px;
 }
 
 .about .btn-read-more {
@@ -596,7 +628,7 @@ section {
 --------------------------------------------------------------*/
 .values .box {
   padding: 30px;
-  box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   text-align: center;
   transition: 0.3s;
   height: 100%;
@@ -610,9 +642,12 @@ section {
 
 .values .box h3 {
   font-size: 24px;
-  color: #012970;
+  color: #414141;;
   font-weight: 700;
   margin-bottom: 18px;
+}
+.values .box p{
+  font-size: 15px;
 }
 
 .values .box:hover {
@@ -749,7 +784,7 @@ section {
 }
 
 .features .feature-icons h3 {
-  color: #012970;
+  color: #1b1b1b;
   font-weight: 700;
   font-size: 32px;
   margin-bottom: 20px;
@@ -770,13 +805,13 @@ section {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 10px 0;
-  color: #012970;
+  color: #444;
 }
 
 .features .feature-icons .content .icon-box i {
   font-size: 44px;
   line-height: 44px;
-  color: #0245bc;
+  color: #1b1b1b;
   margin-right: 15px;
 }
 
@@ -1635,6 +1670,9 @@ section {
 
 .contact .php-email-form .sent-message {
   display: none;
+}
+.contact .php-email-form .sent-messages {
+  /* display: none; */
   color: #fff;
   background: #18d26e;
   text-align: center;
@@ -1642,6 +1680,7 @@ section {
   margin-bottom: 24px;
   font-weight: 600;
 }
+
 
 .contact .php-email-form .loading {
   display: none;
@@ -2332,14 +2371,14 @@ section {
 .footer .footer-top .social-links a {
   font-size: 20px;
   display: inline-block;
-  color: rgba(1, 41, 112, 0.5);
+  color: rgba(1, 41, 112);
   line-height: 0;
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .footer-top .social-links a:hover {
-  color: #012970;
+  color: hsl(218, 98%, 22%,0.7);
 }
 
 .footer .footer-top h4 {
@@ -2404,4 +2443,84 @@ section {
   text-align: center;
   font-size: 13px;
   color: #012970;
+}
+
+
+/* test start */
+
+/* .slider{
+  width:400px;
+  margin:20px auto;
+  text-align: center;
+  padding:20px;
+  color:black;
+}
+.slider.parent-slide{
+  padding:15px;
+}
+.slider img{
+  display: block;
+  margin:auto;
+} */
+/* test end */
+
+
+.our-workport .swiper-slide img{
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+
+}
+@media (max-width: 600px){
+  .our-workport .swiper-slide img{
+    height: 200px;  
+  }
+}
+
+
+
+
+/* reutaion */
+.reputation i{
+  background-color: #012970;
+  color: #fff;
+  border-radius: 114px 42px 135px 61px;
+  padding: 20px;
+}
+.reputation h2{
+  color: #1b1b1b;
+}
+
+
+
+/* images */
+.images-top{
+  height: 50px;
+  width: 100%;
+  background-color: #1b1b1b;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+.gallery .images-top a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.gallery .img-0 img{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  padding: 0;
+  margin: 0;
+}
+.gallery .img-0{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
